@@ -1,3 +1,22 @@
+**FOR ME
+**IN FILE  MX/Modules.php 
+**Change Path modules to web_modules  and rename Floder modules to web_modules 
+**copy system  ci3 new version replace old system , index.php  to upgrade version 
+
+
+<?php (defined('BASEPATH')) OR exit('No direct script access allowed');
+
+(defined('EXT')) OR define('EXT', '.php');
+
+global $CFG;
+
+/* get module locations from config settings or use the default module location and offset */
+is_array(Modules::$locations = $CFG->item('modules_locations')) OR Modules::$locations = array(
+	APPPATH.'web_modules/' => '../web_modules/',
+);
+
+
+
 *******************
 What is CodeIgniter
 *******************
